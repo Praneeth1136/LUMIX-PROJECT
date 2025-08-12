@@ -562,7 +562,7 @@ app.get("/", (req, res) => {
   }
 });
 app.get("/github/githubindex.html", (req, res) =>
-  res.sendFile(path.join(__dirname, "/githubgithubindex.html"))
+  res.sendFile(path.join(__dirname, "github", "githubindex.html"))
 );
 app.get("/home.html", isAuthenticated, (req, res) =>
   res.sendFile(path.join(__dirname, "home.html"))
