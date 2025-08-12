@@ -558,7 +558,7 @@ app.get("/", (req, res) => {
   if (req.session.accessToken) {
     res.redirect("/github/dashboard.html");
   } else {
-    res.redirect("/github/githubindex.html");
+    res.redirect("/index.html");
   }
 });
 app.get("/github/githubindex.html", (req, res) =>
