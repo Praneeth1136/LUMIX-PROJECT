@@ -548,7 +548,7 @@ const isAuthenticated = (req, res, next) => {
       .json({ error: "User not authenticated. Please log in again." });
   }
   // Otherwise, redirect for normal page requests
-  res.redirect("/githubindex.html");
+  res.redirect("/github/githubindex.html");
 };
 
 app.use(express.json());
@@ -558,11 +558,11 @@ app.get("/", (req, res) => {
   if (req.session.accessToken) {
     res.redirect("/github/dashboard.html");
   } else {
-    res.redirect("/githubindex.html");
+    res.redirect("/github/githubindex.html");
   }
 });
-app.get("/githubindex.html", (req, res) =>
-  res.sendFile(path.join(__dirname, "githubindex.html"))
+app.get("/github/githubindex.html", (req, res) =>
+  res.sendFile(path.join(__dirname, "/githubgithubindex.html"))
 );
 app.get("/home.html", isAuthenticated, (req, res) =>
   res.sendFile(path.join(__dirname, "home.html"))
@@ -570,7 +570,7 @@ app.get("/home.html", isAuthenticated, (req, res) =>
 
 app.get("/callback", (req, res) => {
   const { code } = req.query;
-  if (!code) return res.redirect("/githubindex.html?error=auth_failed");
+  if (!code) return res.redirect("/github/githubindex.html?error=auth_failed");
 
   const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
   const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
@@ -595,12 +595,12 @@ app.get("/callback", (req, res) => {
         req.session.accessToken = accessToken;
         res.redirect("/github/dashboard.html");
       } else {
-        res.redirect("/githubindex.html?error=token_failed");
+        res.redirect("/github/githubindex.html?error=token_failed");
       }
     })
     .catch((err) => {
       console.error("Error in OAuth token exchange:", err.message);
-      res.redirect("/githubindex.html?error=internal_error");
+      res.redirect("/github/githubindex.html?error=internal_error");
     });
 });
 
