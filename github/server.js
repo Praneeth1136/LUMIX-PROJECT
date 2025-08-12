@@ -500,7 +500,7 @@
 
 // Set environment variables directly in code (temporary fix)
 process.env.GITHUB_CLIENT_ID = "Ov23liP4eHuY5M0qNeXr";
-process.env.GITHUB_CLIENT_SECRET = "f6c04eb34a2a2895fa15a1a92672e16e15fb17aa";
+process.env.GITHUB_CLIENT_SECRET = "48d7c80f7a2ac417d5f320c28b07270f89efdecf";
 process.env.GEMINI_API_KEY = "AIzaSyC-1rnVINoKZpVsdB80iOSTg298h0J4iBo";
 
 const express = require("express");
