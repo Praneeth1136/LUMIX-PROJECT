@@ -753,7 +753,7 @@
         const githubLoginButton = document.getElementById("github-login-btn");
         githubLoginButton.addEventListener("click", () => {
           const clientId = "Ov23liP4eHuY5M0qNeXr"; // Your GitHub App's Client ID
-          const redirectUri = "https://lumix-project.onrender.com/callback";
+          const redirectUri = "https://lumixproject.onrender.com/callback";
           const scope = "repo"; // 'repo' scope is required for private repos and commits
           window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
         });
