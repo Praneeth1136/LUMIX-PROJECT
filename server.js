@@ -555,11 +555,7 @@ app.use(express.json());
 
 // --- CORE ROUTES ---
 app.get("/", (req, res) => {
-  if (req.session.accessToken) {
-    res.redirect("/github/dashboard.html");
-  } else {
-    res.redirect("/index.html");
-  }
+  res.redirect("/index.html");
 });
 app.get("/github/githubindex.html", (req, res) =>
   res.sendFile(path.join(__dirname, "github", "githubindex.html"))
