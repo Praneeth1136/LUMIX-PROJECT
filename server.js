@@ -8,7 +8,7 @@
 // require("dotenv").config(); 
 
 // // Add this debugging code
-// console.log("=== ENVIRONMENT DEBUG ===");
+// console.log("=== ENVIRONMENT DEBUG ==="); 
 // console.log("Current working directory:", process.cwd());
 // console.log("Environment variables found:");
 // console.log("GITHUB_CLIENT_ID:", process.env.GITHUB_CLIENT_ID || "NOT FOUND");
