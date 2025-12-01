@@ -7,7 +7,7 @@
 // );  
 // require("dotenv").config(); 
 
-// // Add this debugging code
+// // Add this debugging code 
 // console.log("=== ENVIRONMENT DEBUG ==="); 
 // console.log("Current working directory:", process.cwd());
 // console.log("Environment variables found:");
