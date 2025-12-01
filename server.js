@@ -5,7 +5,7 @@
 //   process.env.GITHUB_CLIENT_SECRET,
 //   process.env.GEMINI_API_KEY
 // ); 
-// require("dotenv").config();
+// require("dotenv").config(); 
 
 // // Add this debugging code
 // console.log("=== ENVIRONMENT DEBUG ===");
